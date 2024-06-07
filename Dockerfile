@@ -13,10 +13,14 @@ RUN apt-get update \
   && apt-get -y install netcat gcc postgresql \
   && apt-get clean
 
-# install python dependencies
-RUN pip install --upgrade pip
-COPY ./requirements.txt .
-RUN pip install -r requirements.txt
 
 # add app
 COPY . .
+
+# install poetry
+RUN pip install poetry
+
+# install poetry
+RUN poetry install --no-root
+
+CMD ["poetry", "shell"]

@@ -6,4 +6,4 @@ if [ -z "$1" ]; then
 fi
 
 # Run the migration service to create a new migration
-docker-compose run --rm migration alembic revision --autogenerate -m "$1"
+docker-compose run --rm migration sh -c "sleep 5 && poetry run alembic revision --autogenerate -m \"$1\""
