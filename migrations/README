@@ -1,0 +1,5 @@
+We store database migration history here, it's *slightly* more human-readable
+than going through the files one-by-one following the revision_id.
+
+
+1. a8dc38536b15_init.py
