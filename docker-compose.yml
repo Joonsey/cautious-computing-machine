@@ -9,9 +9,15 @@ services:
       - 8004:8000
     environment:
       - DATABASE_URL=postgresql+asyncpg://postgres:postgres@db:5432/foo
+      - SERVICE_ADDRESS=sw
     depends_on:
       - db
+      - sw
 
+  sw:
+    build: ./app/sceptile
+    ports:
+      - 5555:5555
   db:
     image: postgres:15.3
     expose:

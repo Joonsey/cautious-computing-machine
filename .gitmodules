@@ -1,3 +1,6 @@
 [submodule "sceptile"]
 	path = sceptile
 	url = git@github.com:Joonsey/sceptile.git
+[submodule "app/sceptile"]
+	path = app/sceptile
+	url = git@github.com:Joonsey/sceptile.git

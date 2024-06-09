@@ -14,6 +14,7 @@ uvicorn = "0.22.0"
 alembic = "1.11.1"
 httpx = "^0.27.0"
 pytest = "^8.2.2"
+zmq = "^0.0.0"
 
 
 [build-system]
