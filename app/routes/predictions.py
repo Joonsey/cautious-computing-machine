@@ -10,9 +10,9 @@ router = APIRouter(prefix="/prediction")
 
 @router.post("/", response_model=prediction.Prediction)
 async def create_prediction(prediction_request: prediction.PredictionCreate, session: AsyncSession = Depends(get_session)):
-    start_time = time()
+    start_time = time() * 1000
     result = client.predict(prediction_request.image_path)
-    total_time = int(time() - start_time)
+    total_time = int(time() * 1000 - start_time)
 
     db_prediction = prediction.Prediction(
         image_path=prediction_request.image_path,
