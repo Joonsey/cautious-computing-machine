@@ -7,6 +7,7 @@ WORKDIR /usr/src
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
+ENV PYTHONPATH "$PYTHONPATH:app:app/sceptile"
 
 # install system dependencies
 RUN apt-get update \

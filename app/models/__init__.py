@@ -1,2 +1,1 @@
-import app.models.feature_toggle
-
+import app.models.prediction

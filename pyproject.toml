@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "runtime-ff"
+name = "sceptile-api"
 version = "0.1.0"
 description = ""
 authors = ["Johannes <johannes.ronning@outlook.com>"]

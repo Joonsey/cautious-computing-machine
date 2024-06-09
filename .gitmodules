@@ -1,0 +1,3 @@
+[submodule "sceptile"]
+	path = sceptile
+	url = git@github.com:Joonsey/sceptile.git
