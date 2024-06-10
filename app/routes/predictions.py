@@ -16,7 +16,7 @@ def _map_status(sign: str) -> prediction.PredictionStatus:
     else:
         return prediction.PredictionStatus.ERROR
 
-@router.post("/", response_model=prediction.Prediction)
+@router.post("/", response_model=prediction.PredictionInsertResponse)
 async def create_prediction(prediction_request: prediction.PredictionCreate, session: AsyncSession = Depends(get_session)):
     start_time = time() * 1000
     sign, result = client.predict(prediction_request.image_path)
