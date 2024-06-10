@@ -8,4 +8,3 @@ app.include_router(apis)
 @app.get("/healthy")
 async def health_check():
     return "healthy", 200
-

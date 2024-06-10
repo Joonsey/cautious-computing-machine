@@ -1,7 +1,12 @@
+from enum import StrEnum, auto
 import uuid
 
 from typing import Optional
 from sqlmodel import Field, SQLModel
+
+class PredictionStatus(StrEnum):
+    SUCCESS = auto()
+    ERROR = auto()
 
 class PredictionBase(SQLModel):
     image_path: str
@@ -12,6 +17,7 @@ class Prediction(PredictionBase, table=True):
     result: str
     time_to_compute_ms: int
     model: str
+    status: PredictionStatus
 
 class PredictionCreate(PredictionBase):
     pass
